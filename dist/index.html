@@ -1,0 +1,41 @@
+<!DOCTYPE HTML><html lang=en-US><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><script src=js/modernizr.js></script><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel=stylesheet type=text/css><link rel=stylesheet href=css/styles.css><link rel=stylesheet href=css/font-awesome.min.css><link href=/js/app.c368549f.js rel=preload as=script><link href=/js/chunk-vendors.1c377c6f.js rel=preload as=script></head><body class=color-scheme-neue><canvas id=bg-canvas></canvas><div class=bg-img style="width: 100%; height: 100%; position: fixed; background: #0c0a13 url(images/space-bg.jpg) no-repeat center center; background-size: 100% auto;"></div><div class=splash><div class=centered-unit><div class=container><h1>We do our best to launch soon!</h1><p class=lead>Dealing with some really complicated stuff here.</p><div class="countdown large" style="margin-top: 120px;"><div class="time days"><div class=value>00</div><div class=unit>Days</div></div><div class="time hours"><div class=value>00</div><div class=unit>Hours</div></div><div class="time minutes"><div class=value>00</div><div class=unit>Minutes</div></div><div class="time seconds"><div class=value>00</div><div class=unit>Seconds</div></div></div></div></div></div><div class=overlap><a href="" class=more>Scroll down <i class="fa fa-chevron-down"></i> to learn more</a><div class="container few-words"><div class=row><div class="col col-heading"><h2>A few words about our awesome company!</h2><div class=social><a href="" class=social-icon><i class="fa fa-twitter fa-lg"></i> </a><a href="" class=social-icon><i class="fa fa-facebook fa-lg"></i> </a><a href="" class=social-icon><i class="fa fa-google-plus fa-lg"></i> </a><a href="" class=social-icon><i class="fa fa-instagram fa-lg"></i></a></div></div><div class="col col-content"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.</p></div><div class="col col-contacts"><h3>Contact us</h3><div class=contact><span class=icon><i class="fa fa-phone fa-fw"></i></span> <span class=value>+1 800 9780081</span></div><div class=contact><span class=icon><i class="fa fa-envelope-o fa-fw"></i></span> <span class=value><a href="mailto: info@company.com">info@company.com</a></span></div><div class=contact><span class=icon><i class="fa fa-map-marker fa-fw"></i></span> <span class=value>Jacka Malczewkiego 7/50,<br>80-107 Gdansk,<br>Poland</span></div></div></div></div><div class=notify-by-email><div class=container><div class=row><div class="col col-one-third"><h3>Send me an email when&nbsp;it's done!</h3></div><div class="col col-two-thirds"><form action=notify-me.php id=notifyMe method=POST><input type=text name=email placeholder="Your e-mail address"> <button>Send</button><p class=note>We promise not to spam... No seriously, we won't!</p></form></div></div></div></div><div class=footer><div class=container>&copy; 2014 Design as religion. All rights reserved.</div></div></div><script src=js/jquery.js></script><script src=js/countdown.js></script><script src=js/bezierCanvas.js></script><script src=js/notifyMe.js></script><script>$().ready(function(){
+
+		// Activate countdownTimer plugin on a '.countdown' element
+		$(".countdown").countdownTimer({
+			// Set the end date for the countdown
+			endTime: new Date("January 21, 2019 11:13:00 UTC+0200")
+		});
+
+
+		// Activate notifyMe plugin on a '#notifyMe' element
+		$("#notifyMe").notifyMe();
+
+
+		// Activate bezierCanvas plugin on a #bg-canvas element
+		$("#bg-canvas").bezierCanvas({
+			maxStyles: 1,
+			maxLines: 50,
+			lineSpacing: .07,
+			spacingVariation: .07,
+			colorBase: {r: 120,g: 100,b: 220},
+			colorVariation: {r: 50, g: 50, b: 30},
+			moveCenterX: 0,
+			moveCenterY: 0,
+			delayVariation: 3,
+			globalAlpha: 0.4,
+			globalSpeed:30,
+		});
+
+
+
+
+		// Add handler on 'Scroll down to learn more' link
+		$().ready(function(){
+			$(".overlap .more").click(function(e){
+				e.preventDefault();
+				$("body,html").animate({scrollTop: $(window).height()});
+			});
+		});
+
+
+	});</script><script src=/js/chunk-vendors.1c377c6f.js></script><script src=/js/app.c368549f.js></script></body></html>
